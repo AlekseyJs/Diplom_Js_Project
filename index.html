@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главная</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="css/new.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <!-- font-family: 'Montserrat', sans-serif; -->
+        
+    </head>
+<body>
+    <div class="wrapper">
+
+        <!-- Header -->
+
+        <header class="center">
+            <div class="top-header">
+                <div class="site-name">ТКАНИ</div>
+                <div class="location">
+                    <img src="./images/vector/location.svg" alt="location">
+                    <div class="location-name">Санкт-Петербург</div>
+                </div>
+                <input id="searchput" name="searchPut" type="text" placeholder="Я ищу">
+                <div class="info">
+                    <div class="phone">8 800 900 70 90</div>
+                    <div class="work-time">Пн-вс: 10:00 - 21:00</div>
+                </div>
+                <div class="active-box">
+                    <div class="left-active">
+                        <div class="like" title="Добавить сайт в избранное"><img src="./images/vector/like.svg" alt="likes"></div>
+                        <div class="user" title="Поделиться с друзьями"><img src="./images/vector/User.svg" alt="users"></div>
+                    </div>
+                    <div class="cart"  title="Моя корзина">
+                        <img src="./images/vector/cart.svg" alt="cart">
+                        <a id="item-selected" href="#">0</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-menu center">
+                <ul id="navUl">
+                    <li class="navItem cloth">
+                        <a class="cloth" href="#">Для одежды</a>
+                    </li>
+                    <ul class="clothTextileMenu">
+                        <li class="toggledLiItem"><a href="textile.html">Текстиль</a></li>
+                        <li class="toggledLiItem"><a href="#">Синтетика</a></li>
+                        <li class="toggledLiItem"><a href="#">Хлопок</a></li>
+                        <li class="toggledLiItem"><a href="#">Полиэстер</a></li>
+                        <li class="toggledLiItem"><a href="#">Шёлк</a></li>
+                    </ul>
+                    <li class="navItem"><a href="#">Для интерьера</a></li>
+                    <li class="navItem"><a href="#">Мебельные</a></li>
+                    <li class="navItem"><a href="#">Фурнитура</a></li>
+                    <li class="navItem"><a href="#">Пряжа</a></li>
+                    <li class="navItem"><a href="#">Новогодние</a></li>
+                    <li class="navItem"><a href="#">Для шитья</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Slider -->
+
+        <section class="main-slider swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="slider-card swiper-slide">
+                    <div class="card-img">
+                        <img src="./images/Index/slider-theme.png" alt="theme">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="info">
+                            Скидки 20% <br>на новые ткани
+                        </h2>
+                    </div>
+                </div>
+                <div class="slider-card swiper-slide">
+                    <div class="card-img">
+                        <img src="./images/Index/slider-theme.png" alt="theme">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="info">
+                            Скидки 35% <br>на старые ткани
+                        </h2>
+                    </div>
+                </div>
+                <div class="slider-card swiper-slide">
+                    <div class="card-img">
+                        <img src="./images/Index/slider-theme.png" alt="theme">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="info">
+                            Самовывоз -5% <br>на все ткани
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>   
+        </section>
+
+        <section class="current-discount center">
+            <h2>Сейчас действуют следующие скидки:</h2>
+            <div class="discount-box">
+                <div class="discount">
+                    <div class="disc-img-box">
+                        <img src="./images/Index/slider-theme1.png" alt="скидки">
+                    </div>
+                    <div class="disc-info">
+                        <p class="disc-percent">20%</p>
+                        <p class="disc-percent-info">на новые ткани</p>
+                    </div>
+                    <div class="disc-gradient"></div>
+                </div>
+                <div class="discount">
+                    <div class="disc-img-box">
+                        <img src="./images/Index/slider-theme2.png" alt="скидки">
+                    </div>
+                    <div class="disc-info">
+                        <p class="disc-percent">35%</p>
+                        <p class="disc-percent-info">на старые ткани</p>
+                    </div>
+                    <div class="disc-gradient"></div>
+                </div>
+                <div class="discount">
+                    <div class="disc-img-box">
+                        <img src="./images/Index/slider-theme3.png" alt="скидки">
+                    </div>
+                    <div class="disc-info">
+                        <p class="disc-percent">-5%</p>
+                        <p class="disc-percent-info">при самовывозе</p>
+                    </div>
+                    <div class="disc-gradient"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalogs-about">
+            <div class="catalog-bg"></div>
+            <div class="center">
+                
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="./script/cart.js"></script>
+    <script src="./script/sorts.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+    </script>
+    <script src="./script/script.js"></script>    
+</body>
+</html>

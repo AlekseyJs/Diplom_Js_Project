@@ -1,0 +1,194 @@
+{"data" :[
+    {   
+        "id": 1,
+        "about":{
+            "width": 1.2,
+            "consistence": 140,
+            "type": "Акрил",
+            "name": "Букле 'Барашек' (хаки)",
+            "img": "./images/catalog/el1.jpg",
+            "price": 28.90,
+            "wholesale_price": 24.85
+        }
+    },
+    {
+        "id": 2,
+        "about":{
+            "width": 0.8,
+            "consistence": 170,
+            "type": "Атлас",
+            "name": "Пальтовая 'Акрил' (серый)",
+            "img": "./images/catalog/el2.jpg",
+            "price": 38.90,
+            "wholesale_price": 34.85
+        }
+    },
+    {
+        "id": 3,
+        "about":{
+            "width": 1.4,
+            "consistence": 110,
+            "type": "Бархат",
+            "name": "Пальт. 'Акрил'(карамель)",
+            "img": "./images/catalog/el3.jpg",
+            "price": 38.90,
+            "wholesale_price": 34.85
+        }
+    },
+    {
+        "id": 4,
+        "about":{
+            "width": 2.0,
+            "consistence": 160,
+            "type": "Лён",
+            "name": "Пальт. 'Лоден'(марсала)",
+            "img": "./images/catalog/el4.jpg",
+            "price": 35.90,
+            "wholesale_price": 31.85
+        }
+    },
+    {
+        "id": 5,
+        "about":{
+            "width": 1.2,
+            "consistence": 140,
+            "type": "Акрил",
+            "name": "Твид 'ЛАК'",
+            "img": "./images/catalog/el5.jpg",
+            "price": 37.90,
+            "wholesale_price": 33.85
+        }
+    },
+    {
+        "id": 6,
+        "about":{
+            "width": 0.8,
+            "consistence": 170,
+            "type": "Атлас",
+            "name": "Лоден (мята)",
+            "img": "./images/catalog/el6.jpg",
+            "price": 39.90,
+            "wholesale_price": 35.85
+        }
+    },
+    {
+        "id": 7,
+        "about":{
+            "width": 1.4,
+            "consistence": 110,
+            "type": "Бархат",
+            "name": "Пальт.'Шанелька'",
+            "img": "./images/catalog/el7.jpg",
+            "price": 41.90,
+            "wholesale_price": 36.85
+        }
+    },
+    {
+        "id": 8,
+        "about":{
+            "width": 2.0,
+            "consistence": 160,
+            "type": "Лён",
+            "name": "Твид 'ЛАК' (серебро)",
+            "img": "./images/catalog/el8.jpg",
+            "price": 35.90,
+            "wholesale_price": 31.85
+        }
+    },
+    {
+        "id": 9,
+        "about":{
+            "width": 1.2,
+            "consistence": 140,
+            "type": "Акрил",
+            "name": "Букле 'Барашек' (хаки)",
+            "img": "./images/catalog/el1.jpg",
+            "price": 28.90,
+            "wholesale_price": 24.85
+        }
+    },
+    {    
+        "id": 10,
+        "about":{
+            "width": 0.8,
+            "consistence": 170,
+            "type": "Атлас",
+            "name": "Пальт. 'Акрил'(серый)",
+            "img": "./images/catalog/el2.jpg",
+            "price": 38.90,
+            "wholesale_price": 34.85
+        }
+    },
+    {
+        "id": 11,
+        "about":{
+            "width": 1.4,
+            "consistence": 110,
+            "type": "Бархат",
+            "name": "Пальт. 'Акрил'(карамель)",
+            "img": "./images/catalog/el3.jpg",
+            "price": 38.90,
+            "wholesale_price": 34.85
+        }
+    },
+    {
+        "id": 12,
+        "about":{
+            "width": 2.0,
+            "consistence": 160,
+            "type": "Лён",
+            "name": "Пальт. 'Лоден'(марсала)",
+            "img": "./images/catalog/el4.jpg",
+            "price": 35.90,
+            "wholesale_price": 31.85
+        }
+    },
+    {    
+        "id": 13,
+        "about":{
+            "width": 1.2,
+            "consistence": 140,
+            "type": "Акрил",
+            "name": "Твид 'ЛАК'",
+            "img": "./images/catalog/el5.jpg",
+            "price": 37.90,
+            "wholesale_price": 33.85
+        }
+    },
+    {   
+        "id": 14,
+        "about":{
+            "width": 0.8,
+            "consistence": 170,
+            "type": "Атлас",
+            "name": "Лоден (мята)",
+            "img": "./images/catalog/el6.jpg",
+            "price": 39.90,
+            "wholesale_price": 35.85
+        }
+    },
+    {    
+        "id": 15,
+        "about":{
+            "width": 1.4,
+            "consistence": 110,
+            "type": "Бархат",
+            "name": "Пальт. 'Шанелька'",
+            "img": "./images/catalog/el7.jpg",
+            "price": 41.90,
+            "wholesale_price": 36.85
+        }
+    },
+    {    
+        "id": 16,
+        "about":{
+            "width": 2.0,
+            "consistence": 160,
+            "type": "Лён",
+            "name": "Твид 'ЛАК' (серебро)",
+            "img": "./images/catalog/el8.jpg",
+            "price": 35.90,
+            "wholesale_price": 31.85
+        }
+    }
+]}
