@@ -17,4 +17,17 @@ document.addEventListener('click', (e) => {
     }    
 })
 
-//
+//Открытие корзины
+const cartModal = document.querySelector('.cart-modal');
+
+document.addEventListener('click', (ev) => {
+    if(ev.target.closest('.cart-nav')){
+        cartModal.classList.toggle('show-cart-class');
+        getCartItems(localStorage.getItem("shopCart"));
+    }
+})
+document.addEventListener('click', (ev) => {
+    if(!ev.target.closest('.cart-nav')){
+        cartModal.classList.remove('show-cart-class');
+    }
+})

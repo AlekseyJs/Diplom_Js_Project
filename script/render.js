@@ -4,16 +4,38 @@ const GOODS_LIST = 'http://localhost:3000/data';
 
 const renderArea = document.querySelector('.goods-render-box');
 
-const getGoodItem = () => {
+//Функция получения корректного массива, учитывающая фильтры критерия отбора товаров
+
+const getGoodItem = (param) => {
     fetch(`${GOODS_LIST}`).then(
         res => res.json()
     ).then(
         data => {
-            renderGoodsList(data);
+            if(param)
+            {
+                const filterData = data.filter( (item)=>{
+                    
+                    return (!param.priceFrom || param.priceFrom <= item.about.price)
+                     && (!param.priceTo || param.priceTo >= item.about.price)
+                     && (!param.widthFrom || param.widthFrom <= item.about.width)
+                     && (!param.widthTo || param.widthTo >= item.about.width)
+                     && (!param.consistenceFrom || param.consistenceFrom <= item.about.consistence)
+                     && (!param.consistenceTo || param.consistenceTo >= item.about.consistence)
+                     ;
+                });
+            renderGoodsList(filterData);
+            }
+            else{
+                renderGoodsList(data);
+            }
         }
     )
 }
+
 getGoodItem();
+updateCartBtnCounter();
+
+//Рендер карточек товара в каталоге
 
 const renderGoodsList = (goodsArr) =>{
     renderArea.innerHTML = '';
@@ -38,9 +60,44 @@ const renderGoodsList = (goodsArr) =>{
                 <div class="textile-price-box">
                     <p class="discount-price">${goodsArr[i].about.wholesale_price}$</p>
                     <p class="full-price">${goodsArr[i].about.price}$</p>
-                <a href="#" class="add-cart-btn">В корзину</a>
+                <a class="add-cart-btn"  data-id="${goodsArr[i].id}" >В корзину</a>
                 </div>           
             </div>
         `
     }
+}
+
+
+
+const getCartItems = (param) => {
+    fetch(`${GOODS_LIST}`).then(
+        res => res.json()
+    ).then(
+        data => {
+
+            if(param){
+                let cartStorage = JSON.parse(param);
+
+                const filterData = data.filter( (item)=>{
+                    if( undefined != cartStorage[item.id] && 0 != cartStorage[item.id]){
+                        item.count = cartStorage[item.id];
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                });
+                renderCartList(filterData);
+            }
+            else{
+                renderCartList();
+            }
+        }
+    )
+}
+
+//Рендер карточек товара в корзине
+
+function renderCartList(){
+    console.log('renderCartList');
 }

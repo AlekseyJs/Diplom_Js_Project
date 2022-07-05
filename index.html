@@ -37,9 +37,22 @@
                         <div class="like" title="Добавить сайт в избранное"><img src="./images/vector/like.svg" alt="likes"></div>
                         <div class="user" title="Поделиться с друзьями"><img src="./images/vector/User.svg" alt="users"></div>
                     </div>
-                    <div class="cart"  title="Моя корзина">
+                    <div class="cart-nav"  title="Моя корзина">
                         <img src="./images/vector/cart.svg" alt="cart">
-                        <a id="item-selected" href="#">0</a>
+                        <a id="item-cart-counter" href="#">0</a>
+                        <div class="cart-modal">
+                            <div class="cart-item-card">
+                                <div class="cart-item-img">
+                                    <img src="./images/catalog/el1.jpg" alt="">
+                                </div>
+                                <div class="cart-item-value">
+                                    <a class="cart-minus-btn">-</a>
+                                    <p id="cart-current-value">1</p>
+                                    <a class="cart-plus-btn">+</a>
+                                </div>
+                                <div class="cart-item-total-price">Цена за наименование: <span id="good-cart-price">32.87$</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +62,7 @@
                         <a class="cloth" href="#">Для одежды</a>
                     </li>
                     <ul class="clothTextileMenu">
-                        <li class="toggledLiItem"><a href="textile.html">Текстиль</a></li>
+                        <li class="toggledLiItem"><a href="catalog.html">Каталог</a></li>
                         <li class="toggledLiItem"><a href="#">Синтетика</a></li>
                         <li class="toggledLiItem"><a href="#">Хлопок</a></li>
                         <li class="toggledLiItem"><a href="#">Полиэстер</a></li>
