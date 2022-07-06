@@ -28,6 +28,7 @@
                     <div class="location-name">Санкт-Петербург</div>
                 </div>
                 <input id="searchput" name="searchPut" type="text" placeholder="Я ищу">
+                <button id="searchput-btn">Искать</button>
                 <div class="info">
                     <div class="phone">8 800 900 70 90</div>
                     <div class="work-time">Пн-вс: 10:00 - 21:00</div>
@@ -41,7 +42,7 @@
                         <img src="./images/vector/cart.svg" alt="cart">
                         <a id="item-cart-counter" href="#">0</a>
                         <div class="cart-modal">
-                            <div class="cart-item-card">
+                            <!-- <div class="cart-item-card">
                                 <div class="cart-item-img">
                                     <img src="./images/catalog/el1.jpg" alt="">
                                 </div>
@@ -51,7 +52,7 @@
                                     <a class="cart-plus-btn">+</a>
                                 </div>
                                 <div class="cart-item-total-price">Цена за наименование: <span id="good-cart-price">32.87$</span></div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
                         <a class="cloth" href="#">Для одежды</a>
                     </li>
                     <ul class="clothTextileMenu">
-                        <li class="toggledLiItem"><a href="textile.html">Текстиль</a></li>
+                        <li class="toggledLiItem"><a href="catalog.html">Каталог</a></li>
                         <li class="toggledLiItem"><a href="#">Синтетика</a></li>
                         <li class="toggledLiItem"><a href="#">Хлопок</a></li>
                         <li class="toggledLiItem"><a href="#">Полиэстер</a></li>
@@ -181,28 +182,28 @@
                             <p class="input-name"> Тип ткани </p>
                             <div class="label-box">
                                 <label for="item1" class="checkbox-names">
-                                    <input type="checkbox" name="item1" id="item1">
+                                    <input type="checkbox" name="item1" id="item1" class="checkbox-item" data-type="Акрил">
                                     <span></span>
                                     Акрил
                                 </label>
                             </div>
                             <div class="label-box"> 
                                 <label for="item2"  class="checkbox-names">
-                                    <input type="checkbox" name="item2" id="item2">
+                                    <input type="checkbox" name="item2" id="item2" class="checkbox-item"  data-type="Атлас">
                                     <span></span>
                                     Атлас
                                 </label>                                
                             </div>
                             <div class="label-box">
                                 <label for="item3" class="checkbox-names">
-                                    <input type="checkbox" name="item3" id="item3">
+                                    <input type="checkbox" name="item3" id="item3" class="checkbox-item"  data-type="Бархат">
                                     <span></span>
                                     Бархат
                                 </label>
                             </div>
                             <div class="label-box"> 
                                 <label for="item4"  class="checkbox-names">
-                                    <input type="checkbox" name="item4" id="item4">
+                                    <input type="checkbox" name="item4" id="item4"  data-type="Лён">
                                     <span></span>
                                     Лён
                                 </label>                                
@@ -210,7 +211,7 @@
                         </li>
                     </ul>
                     <div id="filter-accept-btn">
-                        <a href="#">Применить</a>
+                        <a>Применить</a>
                     </div> 
                 </div>
             </div>

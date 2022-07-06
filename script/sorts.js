@@ -47,16 +47,23 @@ function insertAfter(elem, refElem){
 
 // Сортировки по чеубоксам
 
-const MainSortBtn = document.querySelector('#filter-accept-btn');
+const mainSortBtn = document.querySelector('#filter-accept-btn');
 
-MainSortBtn.addEventListener('click', ()=>{ 
-
+mainSortBtn.addEventListener('click', ()=>{ 
+    let searchValue = document.getElementById('searchput');
     let consistence_from = document.getElementById('consistence_from').value;
     let consistence_to = document.getElementById('consistence_to').value;
     let width_from = document.getElementById('width_from').value;
     let width_to = document.getElementById('width_to').value;
     let price_from = document.getElementById('price_from').value;
     let price_to = document.getElementById('price_to').value;
+    let typeArrTemp = document.querySelectorAll('.checkbox-item');
+    let typeArrRes = [];
+    for (let i = 0; i < typeArrTemp.length; i++) {
+        if(typeArrTemp[i].checked){
+            typeArrRes.push(typeArrTemp[i].getAttribute('data-type'));
+        }
+    }
     let param = {};
     param.consistenceFrom = consistence_from;
     param.consistenceTo = consistence_to;
@@ -64,5 +71,7 @@ MainSortBtn.addEventListener('click', ()=>{
     param.widthTo = width_to;
     param.priceFrom = price_from;
     param.priceTo = price_to;
+    param.type = typeArrRes;
+    param.name = searchValue.value;
     getGoodItem(param);
 })
