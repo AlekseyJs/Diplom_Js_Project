@@ -15,7 +15,7 @@ const getGoodItem = (param) => {
 
 const renderGoodsList2 = (goodsArr) =>{
     renderArea.innerHTML = '';
-    for(let i = 0; i < 10 ;i++){
+    for(let i = 0; i < 8 ;i++){
         renderArea.innerHTML += `
             <div class="good-card" data-price="${goodsArr[i].about.price}" data-width="${goodsArr[i].about.width}" data-consistence="${goodsArr[i].about.consistence}">
                 <div class="good-img-box">

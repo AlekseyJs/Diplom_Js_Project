@@ -50,7 +50,7 @@ function insertAfter(elem, refElem){
 const mainSortBtn = document.querySelector('#filter-accept-btn');
 
 mainSortBtn.addEventListener('click', ()=>{ 
-    let searchValue = document.getElementById('searchput');
+
     let consistence_from = document.getElementById('consistence_from').value;
     let consistence_to = document.getElementById('consistence_to').value;
     let width_from = document.getElementById('width_from').value;
@@ -72,6 +72,6 @@ mainSortBtn.addEventListener('click', ()=>{
     param.priceFrom = price_from;
     param.priceTo = price_to;
     param.type = typeArrRes;
-    param.name = searchValue.value;
+
     getGoodItem(param);
 })

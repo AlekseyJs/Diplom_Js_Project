@@ -566,14 +566,14 @@ header .nav-menu #navUl .clothMenuShow {
 }
 
 .index-goods .goods-render-box {
-  max-width: 1470px;
+  max-width: 1170px;
   display: -ms-grid;
   display: grid;
   row-gap: 50px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0 auto;
   margin-top: 30px;
 }

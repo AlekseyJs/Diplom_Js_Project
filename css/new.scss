@@ -473,11 +473,11 @@ header{
         font-size: 30px;
     }
     .goods-render-box{
-        max-width: 1470px;
+        max-width: 1170px;
         display: grid;
         row-gap: 50px;
         column-gap: 30px;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         margin: 0 auto;
         margin-top: 30px;
         .good-card{

@@ -32,18 +32,3 @@ document.addEventListener('click', (ev) => {
     }
 })
 
-//Поиск
-
-const searchBtn = document.getElementById('searchput-btn');
-
-searchBtn.addEventListener('click', async() =>{
-    let searchValue = document.getElementById('searchput');
-
-    window.location.href = 'catalog.html';
-
-    let param = {};
-    
-    param.name = searchValue.value;
-    console.log(param.name);
-    await getGoodItem(param);
-})
