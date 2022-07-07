@@ -307,6 +307,7 @@ header{
                 a:hover {
                     color: #BF1E77;
                     border-bottom: solid 1px #BF1E77;
+                    cursor: pointer;
                 }
             }
             .clothTextileMenu{
@@ -467,6 +468,10 @@ header{
     margin: 0 auto;
     margin-top: 40px;
     width: 100%;
+    h2{
+        text-align: center;
+        font-size: 30px;
+    }
     .goods-render-box{
         max-width: 1470px;
         display: grid;
@@ -474,11 +479,13 @@ header{
         column-gap: 30px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         margin: 0 auto;
+        margin-top: 30px;
         .good-card{
             width: 270px;
             height: 350px;
             box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.07);
             border-radius: 10px;
+            transition: 0.5s;
             .good-img-box{
                 width: 270px;
                 height: 270px;
@@ -561,6 +568,9 @@ header{
                     cursor: pointer;
                 }
             }
+        }
+        .good-card:hover {
+            transform: scale(1.1);
         }
     }
 }
@@ -738,6 +748,7 @@ header{
                 height: 510px;
                 box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.07);
                 border-radius: 10px;
+                transition: 0.5s;
                 .good-img-box{
                     width: 270px;
                     height: 270px;
@@ -820,6 +831,9 @@ header{
                         cursor: pointer;
                     }
                 }
+            }
+            .good-card:hover {
+                transform: scale(1.1);
             }
         }
     }
