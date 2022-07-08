@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Оформление заказа</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="css/new.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <!-- font-family: 'Montserrat', sans-serif; -->
+        
+    </head>
+<body>
+    <div class="wrapper">
+        <div class="order-window">
+            <h1>Пожалуйста заполните форму заказа</h1>
+            <ul class="input-list">
+                <li class="inputLi">
+                    <input id="full-name" type="text" class="textput full-name" placeholder="Иванов">
+                    <p class="validError">Обязательное для заполнения поле</p>
+                </li>
+                <li class="inputLi">
+                    <input id="name" type="text" class="textput full-name" placeholder="Иван">
+                    <p class="validError">Обязательное для заполнения поле</p>
+                </li>
+                <li class="inputLi">
+                    <input id="phone" type="text" class="textput full-name" placeholder="+375291234567">
+                    <p class="validError">Обязательное для заполнения поле</p>
+                </li>
+            </ul>
+            <button id="order-post-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="./script/order.js"></script>
+</body>
+</html>

@@ -32,3 +32,10 @@ document.addEventListener('click', (ev) => {
     }
 })
 
+//Переход по кнопке оформление заказа
+
+const orderBtn = document.querySelector('.order-btn');
+
+orderBtn.addEventListener('click', ()=>{
+    window.location.href = 'order.html';
+})

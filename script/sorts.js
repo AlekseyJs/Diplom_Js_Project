@@ -1,4 +1,4 @@
-//Сортировка по ворзрастанию/понижению цены
+//События клика по ворзрастанию/понижению цены
 
 document.addEventListener('click', function(ev){
     if(ev.target.classList.contains('cheap-btn')){
@@ -45,7 +45,7 @@ function insertAfter(elem, refElem){
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
 
-// Сортировки по чеубоксам
+// Создание объекта с параметрами сортировки и исполнения рендера с этим объектом
 
 const mainSortBtn = document.querySelector('#filter-accept-btn');
 

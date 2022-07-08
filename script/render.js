@@ -25,11 +25,14 @@ const getGoodItem = async(param) => {
                         && (!param.type || param.type.length==0 || param.type.includes(item.about.type))
                         
                     });
+                
                 renderGoodsList(filterData);
                 }
                 else{
+                    filterData = data;
                     renderGoodsList(data);
                 }
+                return filterData;
             }
         )
     }
@@ -75,14 +78,17 @@ const renderGoodsList = (goodsArr) =>{
 
 //Поиск побуквенно
 
-console.log(filterData); // ПУСТОЙ МАССИВ -  НЕ ПОНИМАЮ ПОЧЕМУ
-
 const searchBar = document.getElementById('searchput');
 
 searchBar.addEventListener('keyup', (e)=>{
-    const searchString = e.target.value;
-    const filteredItems = filterData.filter(item => {
-        return item.name.includes(searchString) || item.type.includes(searchString);
+
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredItems = filterData.filter((item) => {
+        return (
+            item.about.name.toLowerCase().includes(searchString) || 
+            item.about.type.toLowerCase().includes(searchString)
+        );
     });
     renderGoodsList(filteredItems);
 });

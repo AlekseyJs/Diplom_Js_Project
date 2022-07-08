@@ -1,4 +1,4 @@
-
+// Тот же рендер для Главной страницы
 
 const renderArea = document.querySelector('.goods-render-box');
 

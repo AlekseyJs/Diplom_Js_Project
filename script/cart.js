@@ -29,7 +29,7 @@ function onAddBtnClick(e){
     updateCartBtnCounter();
     
 }
-
+updateCartBtnCounter();
 //Обновление счётчика на корзине
 
 function updateCartBtnCounter()
@@ -39,7 +39,6 @@ function updateCartBtnCounter()
     cartStorage = JSON.parse(cartStorage);
     for( let key in cartStorage){
         
-        // sum += cartStorage[key];
         sum++;
     }
     document.getElementById('item-cart-counter').innerText = sum;
@@ -72,19 +71,24 @@ function minusLocalStorageCounter(currentId){
 
 document.addEventListener('click', (e)=>{
     if (e.target.classList.contains('cart-minus-btn')) {
+        document.querySelector('.total-price-value').innerHTML = '';
         const targetId = e.target.closest('.cart-item-card').getAttribute('data-id');
         minusLocalStorageCounter(targetId);
         updateCartBtnCounter();
+        
     }
     if (e.target.classList.contains('cart-plus-btn')) {
+        document.querySelector('.total-price-value').innerHTML = '';
         const targetId = e.target.closest('.cart-item-card').getAttribute('data-id');
         plusLocalStorageCounter(targetId);
         updateCartBtnCounter();
+        
     }
     
 })
 
-//Достаём массив из базы, фильтруем по сЛокалСторейдж и рендерим
+//Достаём массив из базы, фильтруем по localStorage и рендерим
+let currentCartDate = [];
 
 const getCartItems = (param) => {
     fetch('http://localhost:3000/data').then(
@@ -109,23 +113,27 @@ const getCartItems = (param) => {
             else{
                 renderCartList();
             }
+            
         }
     )
 }
 
 //Рендер карточек товара в корзине
 
-const cartRenderArea = document.querySelector('.cart-modal');
+const cartRenderArea = document.querySelector('.cart-modal-render-area');
+let totalPriceCounter = document.querySelector('.total-price-value');
+let sum = 0;
+let orderValue;
 
 function renderCartList(cartArr){
     cartRenderArea.innerHTML = '';
-    if(!cartArr || cartArr === {}){
-        cartRenderArea.innerHTML += `<h2 style="font-size: 30px; line-height: 150%">ТОВАР В КОРЗИНЕ ОТСУТСТВУЕТ`;
+    if(!cartArr){
+        cartRenderArea.innerHTML += `<h2 style="font-size: 40px; line-height: 150%; width: 800px; text-align: center">ТОВАР В КОРЗИНЕ ОТСУТСТВУЕТ`;
     } else {
         cartRenderArea.innerHTML = '';
         for(let i = 0; i < cartArr.length;i++){
             cartRenderArea.innerHTML += `
-                <div class="cart-item-card" data-id=${cartArr[i].id}>
+                <div class="cart-item-card" data-id=${cartArr[i].id} data-count=${cartArr[i].count} data-price=${cartArr[i].about.price}>
                     <div class="cart-item-img">
                         <img src=${cartArr[i].about.img} alt="img">
                     </div>
@@ -138,5 +146,13 @@ function renderCartList(cartArr){
                 </div>
             `
         }
+        sum = 0;
+        for(let i=1; i<cartRenderArea.childNodes.length; i = i+2){
+            sum += cartRenderArea.childNodes[i].getAttribute('data-price')*cartRenderArea.childNodes[i].getAttribute('data-count');
+        }
+        totalPriceCounter.innerHTML = sum.toFixed(1);
+        orderValue = sum.toFixed(1);
     }
 }
+console.log(orderValue)
+// export {orderValue};
