@@ -71,20 +71,20 @@ function minusLocalStorageCounter(currentId){
 
 document.addEventListener('click', (e)=>{
     if (e.target.classList.contains('cart-minus-btn')) {
+
         document.querySelector('.total-price-value').innerHTML = '';
         const targetId = e.target.closest('.cart-item-card').getAttribute('data-id');
         minusLocalStorageCounter(targetId);
         updateCartBtnCounter();
-        
     }
     if (e.target.classList.contains('cart-plus-btn')) {
+
         document.querySelector('.total-price-value').innerHTML = '';
         const targetId = e.target.closest('.cart-item-card').getAttribute('data-id');
         plusLocalStorageCounter(targetId);
         updateCartBtnCounter();
-        
+
     }
-    
 })
 
 //Достаём массив из базы, фильтруем по localStorage и рендерим
@@ -126,7 +126,7 @@ let sum = 0;
 let orderValue;
 
 function renderCartList(cartArr){
-    cartRenderArea.innerHTML = '';
+    // cartRenderArea.innerHTML = '';
     if(!cartArr){
         cartRenderArea.innerHTML += `<h2 style="font-size: 40px; line-height: 150%; width: 800px; text-align: center">ТОВАР В КОРЗИНЕ ОТСУТСТВУЕТ`;
     } else {
@@ -154,5 +154,3 @@ function renderCartList(cartArr){
         orderValue = sum.toFixed(1);
     }
 }
-console.log(orderValue)
-// export {orderValue};

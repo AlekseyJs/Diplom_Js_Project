@@ -50,7 +50,7 @@ const renderGoodsList = (goodsArr) =>{
     renderArea.innerHTML = '';
     for(let i = 0; i < goodsArr.length;i++){
         renderArea.innerHTML += `
-            <div class="good-card" data-price="${goodsArr[i].about.price}" data-width="${goodsArr[i].about.width}" data-consistence="${goodsArr[i].about.consistence}">
+            <div class="good-card" data-price="${goodsArr[i].about.price}" data-width="${goodsArr[i].about.width}" data-consistence="${goodsArr[i].about.consistence}" data-id="${goodsArr[i].id}">
                 <div class="good-img-box">
                     <img src=${goodsArr[i].about.img}>
                 </div>
@@ -74,6 +74,7 @@ const renderGoodsList = (goodsArr) =>{
             </div>
         `
     }
+    dragDrop();
 }
 
 //Поиск побуквенно

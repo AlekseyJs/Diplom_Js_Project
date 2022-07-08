@@ -27,7 +27,7 @@ document.addEventListener('click', (ev) => {
     }
 })
 document.addEventListener('click', (ev) => {
-    if(!ev.target.closest('.cart-nav') && !ev.target.closest('.cart-modal')){
+    if(!ev.target.closest('.cart-nav') && !ev.target.closest('.cart-modal') && !ev.target.closest('.good-card')){
         cartModal.classList.remove('show-cart-class');
     }
 })

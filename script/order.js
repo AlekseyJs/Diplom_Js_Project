@@ -20,25 +20,12 @@ for(var i = 0; i < inputList.length; i++){
     })
 }
 
-//Отправка формы
+//Клик по кнопке заказа
 
 const orderPostBtn = document.querySelector('#order-post-btn');
-
-let arr = [];
-
-const getOrders = () => {
-    fetch('http://localhost:3000/data').then(
-        res => res.json()
-    ).then(
-        data => {
-            arr = data;
-            return arr;
-        }
-    )
-    console.log(arr);
-}
+const modalWindow = document.querySelector('.order-window');
 
 orderPostBtn.addEventListener('click', () => {
-    getOrders();
+    modalWindow.innerHTML = `<h2 style =" text-align:center; font-size: 50px; padding: 100px;">Спасибо за заказ</h2>`
     
 })

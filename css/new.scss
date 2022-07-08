@@ -1,7 +1,3 @@
-///СТРАНИЦА blog html-строки порядка 1100
-///СТРАНИЦА about html-строки порядка 1430
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,7 +18,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -293,9 +291,7 @@ header{
                                 }
                             }
                         }
-                        .show-cart-class{
-                            display: block;
-                        }
+                        
                     }
                     .total-box{
                         display: flex;
@@ -555,12 +551,14 @@ header{
                 line-height: 150%;
                 color: #BF1E77;
                 opacity: 0.7;
+                padding-left: 5px;
             }
             .textile-name{
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 150%;
                 color: #BF1E77;
+                padding-left: 5px;
             }
             .textile-wigth{
                 padding-top: 20px;
@@ -623,6 +621,7 @@ header{
         }
         .good-card:hover {
             transform: scale(1.1);
+            box-shadow: 0px 0px 7px 4px #BF1E77;
         }
     }
 }
@@ -750,7 +749,7 @@ header{
                                 color:#BF1E77;
                             }
                         }
-                    }                   
+                    }               
                 }
             }
             #filter-accept-btn{
@@ -770,6 +769,10 @@ header{
                     padding-right: 45px;
                 }
             }
+            #filter-accept-btn:hover{
+                cursor: pointer;
+                background-color: #8a1656;
+            }  
         }
     }
     .goods-main-box{
@@ -787,6 +790,7 @@ header{
             }
             a:hover {
                 color: #BF1E77;
+                cursor: pointer;
             }
         }
         .goods-render-box{
@@ -818,12 +822,14 @@ header{
                     line-height: 150%;
                     color: #BF1E77;
                     opacity: 0.7;
+                    padding-left: 5px;
                 }
                 .textile-name{
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 150%;
                     color: #BF1E77;
+                    padding-left: 5px;
                 }
                 .textile-wigth{
                     padding-top: 20px;
@@ -831,6 +837,7 @@ header{
                     font-size: 16px;
                     line-height: 150%;
                     color: #545155;
+                    padding-left: 5px;
                     span{
                         padding-left: 10px;
                         font-weight: 400;
@@ -846,6 +853,7 @@ header{
                     line-height: 150%;
                     color: #545155;
                     border-bottom: 1px solid #bd7da0;
+                    padding-left: 5px;
                     span{
                         padding-left: 10px;
                         font-weight: 400;
@@ -855,6 +863,7 @@ header{
                 }
                 .textile-price-box{
                     display: flex;
+                    padding-left: 5px;
                     .discount-price{
                         font-weight: 500;
                         font-size: 24px;
@@ -886,6 +895,7 @@ header{
             }
             .good-card:hover {
                 transform: scale(1.1);
+                box-shadow: 0px 0px 7px 4px #BF1E77;
             }
         }
     }
@@ -946,5 +956,92 @@ header{
     button:hover{
         background-color: #8a1656;
         cursor: pointer;
+    }
+}
+
+//Footer
+
+footer{
+    background-color: #FBF7F4;
+    margin-top: 20px;
+    #footer-box{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 19%;
+        margin-right: 19%;
+        #social-footer-box{
+            padding-top: 90px;
+            h3{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                color: #545155;
+            }
+            p{
+                padding-top: 20px;
+            }
+            #social-link-icons{
+                margin-top: 60px;
+                a:hover{
+                    cursor: pointer;
+                }
+            }
+            .info{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 150%;
+                color: #545155;
+                opacity: 0.5;
+                padding-top: 90px;
+            }
+        }
+        #payment-footer-box{
+            padding-left: 60px;
+            padding-top: 90px;
+            h3{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                color: #545155;
+                padding-bottom: 60px;
+            }
+            
+            #payment-cards-box{
+                display: flex;
+                flex-direction: column;
+                img{
+                    width: 30%;
+                    margin-bottom: 20px;
+                }
+            }
+            .info{
+                padding-top: 90px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 150%;
+                color: #545155;
+                opacity: 0.5;
+            }
+        }
+        #map-footer-box{
+            margin-left: 30px;
+            position: relative;
+            #bg-map{
+                width: 500px;
+                height: 500px;
+                position: relative;
+                img{
+                    width: 100%;
+                }
+            }
+            #map-pointer{
+                position: absolute;
+                z-index: 2;
+                width: 500px;
+                height: 500px;
+                top: 70px;
+                left: 125px;
+            }
+        }
     }
 }
