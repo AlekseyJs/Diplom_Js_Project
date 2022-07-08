@@ -36,7 +36,7 @@ const dragDrop = function(){
             }
             
             updateCartBtnCounter();
-            renderCartList();
+            getCartItems(localStorage.getItem("shopCart"));
             dropZone.classList.add('show-cart-class');
         })
 

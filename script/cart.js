@@ -2,6 +2,8 @@
 document.addEventListener('click',(e)=>{
     if(e.target.classList.contains('add-cart-btn')){
         onAddBtnClick(e);
+        document.querySelector('.cart-modal').classList.add('show-cart-class');
+
     }
 })
 
@@ -27,6 +29,7 @@ function onAddBtnClick(e){
     }
     
     updateCartBtnCounter();
+    getCartItems(localStorage.getItem("shopCart"));
     
 }
 updateCartBtnCounter();
@@ -126,7 +129,7 @@ let sum = 0;
 let orderValue;
 
 function renderCartList(cartArr){
-    // cartRenderArea.innerHTML = '';
+    cartRenderArea.innerHTML = '';
     if(!cartArr){
         cartRenderArea.innerHTML += `<h2 style="font-size: 40px; line-height: 150%; width: 800px; text-align: center">ТОВАР В КОРЗИНЕ ОТСУТСТВУЕТ`;
     } else {
